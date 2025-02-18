@@ -41,14 +41,12 @@ privacy and data governance and compliance.
   predictions. The max_output_tokens configuration parameter specifies the maximum number of output tokens to generate
   per message.
 * To generate the model response, a button is created in the tab UI. When the button is clicked, the
-  get_gemini_pro_text_response function is invoked, which we will code in the next step in the lab.
+  get_gemini_pro_text_response function is invoked.
 * The get_gemini_pro_text_response function uses the GenerativeModel and some of the other classes from the
   vertexai.preview.generative_models package in the Vertex AI SDK for Python. From the generate_content method of the
   class, a response is generated using the text prompt that is passed to the method.
-* A safety_settings object is also passed to this method to control the model response by blocking unsafe content. The
-  sample code in this lab uses safety setting values that instructs the model to always return content regardless of the
-  probability of the content being unsafe. You can assess the content generated, and then adjust these settings if your
-  application requires more restrictive configuration. To learn more, view the safety settings documentation.
+* A safety_settings object is also passed to this method to control the model response by blocking unsafe content. This
+  instructs the model to always return content regardless of the probability of the content being unsafe.
 
 # GCP Setup
 
